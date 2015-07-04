@@ -1,0 +1,23 @@
+{
+  "name": "webpack-long-term-cache-demo",
+  "version": "1.0.0",
+  "description": "A demo project which leverages long-term caching for webpack assets",
+  "main": "",
+  "scripts": {
+    "start": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "cache",
+    "long-term",
+    "demo",
+    "sample"
+  ],
+  "author": "@okonetchnikov",
+  "license": "ISC",
+  "dependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.1"
+  }
+}

@@ -22,6 +22,7 @@ module.exports = {
     new ChunkManifestPlugin({
       filename: "chunk-manifest.json",
       manifestVariable: "webpackManifest"
-    })
+    }),
+    new webpack.optimize.OccurenceOrderPlugin()
   ]
 };

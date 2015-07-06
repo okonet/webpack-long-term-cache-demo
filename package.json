@@ -16,7 +16,7 @@
   ],
   "author": "@okonetchnikov",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "chunk-manifest-webpack-plugin": "0.0.1",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.10.1",

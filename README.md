@@ -8,3 +8,8 @@ A demo webpack config showing how to enable long-term caching using Webpack. Rea
 1. Generate the chunk-manifest JSON and inline it into the HTML page before loading resources.
 1. Ensure that the entry point chunk containing the bootstrapping code doesn’t change its hash over time for the same set of dependencies.
 1. Profit!
+
+## How to run
+
+1. `npm install`
+2. `npm start`

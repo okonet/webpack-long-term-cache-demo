@@ -1,7 +1,7 @@
 # webpack-long-term-cache-demo
 A demo webpack config showing how to enable long-term caching using Webpack. Read [medium link] for details.
 
-## tl;dr To enable long-term caching of static resources produced by webpack:
+## To enable long-term caching of static resources produced by webpack:
 
 1. Use `[chunkhash]` to add a content-dependent cache-buster to each file.
 1. Use compiler stats to get the file names when requiring resources in HTML.

@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ManifestPlugin = require('webpack-manifest-plugin');
 var ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
+var WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
   entry: {
@@ -18,6 +19,7 @@ module.exports = {
       name: "vendor",
       minChunks: Infinity,
     }),
+    new WebpackMd5Hash(),
     new ManifestPlugin(),
     new ChunkManifestPlugin({
       filename: "chunk-manifest.json",

@@ -1,5 +1,5 @@
 # webpack-long-term-cache-demo
-A demo webpack config showing how to enable long-term caching using Webpack. Read [medium link] for details.
+A demo webpack config showing how to enable long-term caching using Webpack. Read [Long-term caching of static assets with Webpack](https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.9ro7cpngr) for details.
 
 ## To enable long-term caching of static resources produced by webpack:
 

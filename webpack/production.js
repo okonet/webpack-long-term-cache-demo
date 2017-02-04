@@ -18,6 +18,7 @@ module.exports = {
     app: resolvePath('src/index.js')
   },
   output: {
+    publicPath: '/',
     path: path.join(__dirname, 'build'),
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js'

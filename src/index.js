@@ -1,7 +1,9 @@
-var moduleA = require('./moduleA.js');
-require.ensure(['./moduleB.js'], function(require) {
-    // Lazy load
-    var moduleB = ('./moduleB.js');
-})
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Routes from './Routes'
+import _ from 'lodash'
 
-module.exports = [moduleA, moduleB];
+ReactDOM.render(
+  <Routes />,
+  document.getElementById('root')
+)

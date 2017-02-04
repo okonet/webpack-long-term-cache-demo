@@ -4,10 +4,10 @@ import indexComponent from './indexComponent'
 import childComponent from './childComponent'
 
 export default {
-  path: 'route-a',
+  path: 'route-b',
   component: component,
   indexRoute: {
-    component: Authorize({ isAdmin: true, admin: indexComponent })
+    component: Authorize({ admin: indexComponent })
   },
   childRoutes: [
     childComponent

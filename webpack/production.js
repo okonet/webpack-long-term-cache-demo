@@ -9,12 +9,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 
 const resolvePath = require('./helpers/resolve-path');
 
 module.exports = {
   entry: {
-    vendor: resolvePath('src/vendor.js'),
     app: resolvePath('src/index.js')
   },
   output: {
@@ -40,20 +40,22 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      chunks: ['app'],
+      minChunks: ({ resource }) => /node_modules/.test(resource)
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['manifest']
+    }),
     new HtmlWebpackPlugin({
       template: resolvePath('webpack/html/index.ejs'),
       env: process.env
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "vendor",
-      minChunks: Infinity,
+    new InlineManifestWebpackPlugin({
+      name: 'webpackManifest'
     }),
     new WebpackMd5Hash(),
-    new ManifestPlugin(),
-    new ChunkManifestPlugin({
-      filename: "chunk-manifest.json",
-      manifestVariable: "webpackManifest"
-    }),
     new webpack.optimize.OccurrenceOrderPlugin()
   ]
 };

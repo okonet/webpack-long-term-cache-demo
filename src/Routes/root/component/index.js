@@ -11,6 +11,7 @@ export default class RootContainer extends React.Component {
         <ul>
           <li><Link to='/'>HOME</Link></li>
           <li><Link to='route-a'>Route A</Link></li>
+          <li><Link to='route-b'>Route B</Link></li>
         </ul>
         {this.props.children}
       </div>

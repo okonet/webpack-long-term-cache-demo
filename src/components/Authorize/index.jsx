@@ -7,8 +7,9 @@ export default (options) => {
     render () {
       const AdminComponent = options.admin || NotFound
       const BasicComponent = options.basic || NotFound
+      console.log('admin', options.isAdmin);
 
-      if (options.admin) {
+      if (options.isAdmin) {
         return <AdminComponent {...this.props} />
       } else {
         return <BasicComponent {...this.props} />

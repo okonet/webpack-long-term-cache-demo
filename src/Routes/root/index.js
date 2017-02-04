@@ -2,6 +2,7 @@ import component from './component'
 import indexComponent from './indexComponent'
 
 import routeA from '../routeA'
+import routeB from '../routeB'
 
 export default {
   path: '/',
@@ -10,6 +11,7 @@ export default {
     component: indexComponent
   },
   childRoutes: [
-    routeA
+    routeA,
+    routeB
   ]
 }

@@ -7,7 +7,7 @@ export default {
   path: 'route-b',
   component: component,
   indexRoute: {
-    component: Authorize({ admin: indexComponent })
+    component: Authorize({ isAdmin: true, admin: indexComponent })
   },
   childRoutes: [
     childComponent

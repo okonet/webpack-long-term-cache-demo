@@ -6,14 +6,13 @@ const webpack = require('webpack');
  * long term caching
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
-const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 
 const resolvePath = require('./helpers/resolve-path');
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     app: resolvePath('src/index.js')
   },

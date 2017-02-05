@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Routes from './Routes'
-import _ from 'lodash'
+import _map from 'lodash/map'
 
 ReactDOM.render(
   <Routes />,

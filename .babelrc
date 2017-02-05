@@ -1,0 +1,39 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 10"
+        ]
+      }
+    }],
+    ["es2015", { "modules": false }],
+    "react"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    ["transform-object-rest-spread", { useBuiltIns: true }],
+    ["transform-react-jsx", { useBuiltIns: true }],
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }],
+    "transform-es2015-parameters",
+    ["transform-regenerator", {"async": false}]
+  ],
+  "env": {
+    "development": {
+      "presets": ["react-hmre"],
+      "plugins": [
+        "transform-react-jsx-source",
+        "transform-react-jsx-self"
+      ]
+    }
+  }
+}
